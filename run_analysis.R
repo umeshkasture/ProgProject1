@@ -50,4 +50,5 @@ rm(f_name, features)
 # Step 5
 final <- final %>% select(subject, ActivityName, 3:81) %>% group_by(subject, ActivityName)
 summarized_final <- summarise_all(final, mean)
-write.csv(summarized_final, file = "SummarizedFinal.csv")
+#write.csv(summarized_final, file = "SummarizedFinal.csv")
+write.table(summarized_final, file = "Summarized_final", row.names=FALSE)
